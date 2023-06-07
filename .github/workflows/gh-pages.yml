@@ -22,15 +22,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 🛠️ 1. Checkout Repo
         uses: actions/checkout@v3
-      - name: Setup Node.js version
+      - name: 🛠️ 2. Setup Node.js version
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: pnpm install --frozen-lockfile
+      - run: npm install
       - name: Build
-        run: pnpm run build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
