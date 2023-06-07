@@ -24,6 +24,7 @@ export default defineConfig({
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
     }),
   ],
+  base: "/antd4-vite-starter/",
   resolve: {
     alias: {
       "@/": `${path.resolve(__dirname, "src")}/`,
